@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>iPhone ∞</title>
+
+    <meta property="og:title" content="iPhone ∞" />
+    <meta property="og:description" content="Introducing the new iPhone 5" />
+    <meta property="og:image" content="http://future-iphone.com/images/img.jpeg" />
+
+    <meta name="keywords" content="iPhone ∞, iPhone 6, iPhone 7, iPhone 8, new iPhone, iPhone 5, Future iPhone">
+    <meta name="description" content="The new iPhone ∞!">
+    <meta name="document-state" content="dynamic"/>
+    <meta name="resource-type" content="document"/>
+    <meta name="rating" content="General"/>
+    <meta name="audience" content="all"/>
+    <meta name="author" content="Studio107"/>
+    <meta name="cmsmagazine" content="b4e5e2e2ee8b18f03662dc0ab840ddcb"/>
+    <meta name="google-site-verification" content="Y5O_EOw9FJrA6_rBL_D0QraS7BSAX0zw28Kvbys1j-g"/>
+    <meta name="DC.title" content="Studio107">
+    <meta name="DC.subject" content="Web studio">
+    <meta name="DC.creator" content="Studio107">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!--
+    <link rel="shortcut icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon72px.png">
+    <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 163dpi)" href="/favicon57px.png" />
+    <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 132dpi)" href="/favicon72px.png" />
+    <link rel="apple-touch-icon-precomposed" media="screen and (resolution: 326dpi)" href="/favicon114px.png" />
+    -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/screen.css" type="text/css" />
+
+    <script type="text/javascript">
+    var addthis_share =
+    {
+        title: 'iPhone ∞',
+        description: 'Introducing the new iPhone 5',
+        templates: {
+            twitter: 'Introducing the new iPhone. {{url}}'
+        }
+    };
+
+    $(function () {
+        var $document = $(document),
+                $window = $(window),
+                $container = $('.iphone-body'),
+                hash = window.location.hash.replace('#','');
+
+        if($container.height()<$window.height()) {
+            var count = parseInt($window.height()/100+24);
+            for(i=0;i<count;i++) {
+                newicon();
+            }
+        }
+
+        jQuery.fn.scrollMinimal = function(smooth) {
+            var cTop = this.offset().top;
+            var cHeight = this.outerHeight(true);
+            var windowTop = $(window).scrollTop();
+            var visibleHeight = $(window).height();
+
+            if (cTop < windowTop) {
+                if (smooth) {
+                    $('body').animate({'scrollTop': cTop}, 'slow', 'swing');
+                } else {
+                    $(window).scrollTop(cTop);
+                }
+            } else if (cTop + cHeight > windowTop + visibleHeight) {
+                if (smooth) {
+                    $('body').animate({'scrollTop': cTop - visibleHeight + cHeight}, 'slow', 'swing');
+                } else {
+                    $(window).scrollTop(cTop - visibleHeight + cHeight);
+                }
+            }
+        };
+
+        function resizeHandler()
+        {
+            getPosition();
+        }
+
+        function getPosition()
+        {
+            var $header = $('#header'),
+                    $iphone = $('.iphone');
+            $header.css({
+                'left': $iphone.width() + $iphone.offset().left + 80 + 'px',
+                'display': 'block'
+            });
+        }
+
+        getPosition();
+
+        function scrollHandler()
+        {
+            scrTop = $window.scrollTop();
+            wndHeight = $window.height();
+
+            curScrOffset = scrTop + wndHeight;
+
+            var number = parseInt(curScrOffset / 500);
+            if(number < 5) {
+                number = 5;
+            }
+            window.location.hash = number;
+
+            if(number===107) {
+                number = '<a href="http://studio107.ru" target="_blank">'+number+'</a>';
+            }
+
+            if(number===1100) {
+                $('.logo').html('Nokia <span>' + number + '</span>');
+            } else {
+                $('.logo').html('iPhone <span>' + number + '</span>');
+            }
+
+            el = $container.find('.clear');
+
+            if (el.size() == 0) return 0;
+            treshold = el.offset().top + el.height();
+            treshold -= 200;
+
+            if (curScrOffset >= treshold) {
+                for(i=0;i<8;i++) {
+                    newicon();
+                }
+            }
+        }
+
+        function newicon()
+        {
+            var names = {
+                1: 'YouTube',
+                2: 'InstaMessage',
+                3: 'TempleRun',
+                4: 'Gems',
+                5: 'SpaceEffect',
+                6: 'RevealTheMaze',
+                7: 'AirportScanner',
+                8: 'RunningDead',
+                9: 'Instagram',
+                10: 'SongPop',
+                11: 'GravityGuy',
+                12: 'WhatsMyIQ',
+                13: 'Love Calc',
+                14: 'Wipeout Dash',
+                15: 'Flashlight',
+                16: 'Apple Store',
+                17: 'Pinterest',
+                18: 'Spotify',
+                19: 'Stardom',
+                20: 'InstaCollage',
+                21: 'Snapchat',
+                22: 'Jet Fighters II',
+                23: 'The last driver',
+                24: 'Find my phone',
+                25: 'Ninja MustDie',
+                26: 'Twitter',
+                27: 'MotoHeroz',
+                28: 'Flow Free',
+                29: 'Explore 9/11',
+                30: 'Pandora',
+                31: 'FacebookMsg',
+                32: 'Pic Stitch',
+                33: 'Calorie Counter',
+                34: 'Kakao',
+                35: 'Chrome',
+                36: 'Bingo Rush',
+                37: 'iHeart Radio',
+                38: 'Emoji',
+                39: 'Google Drive',
+                40: 'NFL 12',
+                41: 'Kilk Messenger',
+                42: 'Dictionary',
+                43: 'CNN',
+                44: 'Bombshells',
+                45: 'Bubble mania',
+                46: 'Tap Campus',
+                47: 'Skype',
+                48: 'Facebook',
+                49: 'eBay',
+                50: 'CoinDozer',
+                51: 'QR Reader',
+                52: 'Simpson',
+                53: 'Dishonored',
+                54: 'WallStreet',
+                55: 'Netflix',
+                56: 'Candy Maker',
+                57: 'Google Translate',
+                58: 'Fridays',
+                59: 'Amazon Mobile',
+                60: 'PayPal',
+                61: 'TuneIn Radio',
+                62: 'ESPN',
+                63: 'Viber',
+                64: 'Edmodo',
+                65: 'Emoji',
+                66: 'Disney',
+                67: 'Voxer',
+                68: 'Dropbox',
+                69: 'Gmail',
+                70: 'Angry Birds',
+                71: 'Tango',
+                72: 'LinkedIN',
+                73: 'Facebook Pages',
+                74: 'iBooks',
+                75: 'Emoji',
+                76: 'My Dragon',
+                77: 'Groupon',
+                78: 'Minecraft',
+                79: 'ESPN',
+                80: 'Photo Editor'
+            };
+
+            var number = Math.floor((Math.random()*80)+1),
+                    text = names[number];
+            $container.find('.clear').before('<section class="iphone-icon-container"><section class="iphone-icon icons-'+number+'"></section><section class="iphone-text">'+text+'</section></section>');
+        }
+
+        $window.resize(resizeHandler);
+        $window.scroll(scrollHandler);
+        $window.keydown(function(e){
+            if(e.keyCode==34 || e.keyCode==35) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    });
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-34808284-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+
+<section id="wrapper">
+    <section class="iphone-container">
+        <section class="iphone">
+            <p class="glare"></p>
+            <header class="iphone-header"></header>
+            <section class="iphone-body">
+                <p class="clear"></p>
+            </section>
+        </section>
+    </section>
+
+    <section class="description">
+        <header id="header">
+            <h1 class="logo">iPhone <span>5</span></h1>
+            <h2>Introducing the new iPhone. With the stunning display that could be as big as you wish. Just scroll down to see more.</h2>
+
+            <section class="like">
+                <section class="container">
+                    <!-- AddThis Button BEGIN -->
+                    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                        <a class="addthis_button_vk"></a>
+                        <a class="addthis_button_odnoklassniki_ru"></a>
+                        <a class="addthis_button_facebook"></a>
+                        <a class="addthis_button_twitter"></a>
+                        <a class="addthis_button_livejournal"></a>
+                        <a class="addthis_button_digg"></a>
+                        <a class="addthis_button_linkedin"></a>
+                        <a class="addthis_button_pinterest"></a>
+                        <a class="addthis_button_google_plusone" g:plusone:annotation="none"></a>
+                    </div>
+                    <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f6b181006ff2a26"></script>
+                    <!-- AddThis Button END -->
+                </section>
+            </section>
+            <section class="author">iPhone ∞ by <a href="http://studio107.ru" target="_blank" title="Studio 107">Studio107</a></section>
+            <section class="ads">
+                <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-1318787955823945";
+                /* future-iphone.com */
+                google_ad_slot = "0866947635";
+                google_ad_width = 234;
+                google_ad_height = 60;
+                //-->
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                <p>&nbsp;</p>
+                <script type="text/javascript"><!--
+                google_ad_client = "ca-pub-1318787955823945";
+                /* future-iphone.com - 2 */
+                google_ad_slot = "0055417314";
+                google_ad_width = 234;
+                google_ad_height = 60;
+                //-->
+                </script>
+                <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </section>
+        </header>
+    </section>
+</section>
+
+</body>
+</html>
